@@ -21,6 +21,10 @@ def no_in_question(question: str) -> bool:
     return "no" in question.lower()
 
 
+def end_in_guess(guess: str) -> bool:
+    return "end" in guess.lower().strip()
+
+
 def list_nums_range() -> bool:  # Deciding if the user wants to play with 0 and incrementing the length of the list then
 
     while True:
@@ -62,7 +66,7 @@ while True:
     cows = 0
     guess_input = input("\n Type in your guess: ")
 
-    if "end" in guess_input.lower().strip():
+    if end_in_guess(guess_input):
         print("Game over. Stopped manually!")
         break
 
