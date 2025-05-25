@@ -62,7 +62,7 @@ while True:
     cows = 0
     guess_input = input("\n Type in your guess: ")
 
-    if "end" in guess_input.lower():
+    if "end" in guess_input.lower().strip():
         print("Game over. Stopped manually!")
         break
 
